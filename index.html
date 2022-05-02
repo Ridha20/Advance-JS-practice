@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Advance JavaScript</title>
+ </head>
+<body>
+    <p>Use console to see outputs</p>
+</body>   
+    <script>
+document.write("<strong>Pure Function is a function that always returns the same result if the same arguments are passed.</strong>");
+
+       const add = (x, y) => x + y;
+       console.log(add(2, 4));
+
+document.write("<br><strong><br>An objects inherit properties and methods from a prototype.</strong>");   
+
+
+     function Person () {
+        this.name = 'John',
+        this.age = 23
+       }
+
+     const person1 = new Person();
+     const person2 = new Person();
+
+     Person.prototype.gender = 'male';
+
+     console.log(Person.prototype);
+     console.log(person1.gender);
+     console.log(person2.gender);
+
+
+
+     document.write("<br><br><strong>It transforms functions that translates a function from  f(a, b, c) into  f(a)(b)(c).</strong>");  
+     function calculateVolume(length) {
+        return function (breadth) {
+            return function (height) {
+                return length * breadth * height;
+            }
+        }
+    }
+    console.log(calculateVolume(4)(5)(6));
+
+
+    document.write("<br><br><strong>PIPE functions.</strong><br>");  
+    const add2=(x)=>x+2;
+    const subtract1=(x)=>x-2;
+    const multiplyby5=(x)=>x*5;
+
+    const result =multiplyby5(subtract1(add2(4)));
+    console.log(result);
+  
+    
+    
+
+   
+
+    </script>
+    <a href="debounce.html"><br>Debounce Function</a>
+    <a href="throttle.html"><br><br>Throttle Function</a>
+    <a href="async&await.html"><br><br>Async and Await Function</a>
+    
+    
+
+</html>

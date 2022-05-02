@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async and Await</title>
+</head>
+<body>
+    <p>Async makes a function return a Promise. Await makes a function wait for a Promise</p>
+</body>
+
+<script>
+  async function test(){
+      console.log(" Message 2");
+     console.log(" Message 3");
+      console.log(" Message 4");
+  }
+  console.log(" Message 1");
+      test();
+      console.log(" Message 5");
+
+    </script>
+      <script>  
+       document.write("Async with await . In this message 4 will be displayed after 5 because message 3 is awaiting ");
+       document.write("Till then 5 will be completed");
+      async function test(){
+      console.log(" Message 2");
+      await console.log(" Message 3");
+      console.log(" Message 4");
+  }
+  console.log(" Message 1");
+      test();
+      console.log(" Message 5");
+
+
+     
+
+
+</script>
+</html>
